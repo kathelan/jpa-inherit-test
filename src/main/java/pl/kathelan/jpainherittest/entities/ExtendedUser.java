@@ -14,7 +14,4 @@ public class ExtendedUser extends User {
 
     @Column(name = "third_name")
     private String thirdName;
-
-    public ExtendedUser() {
-    }
 }
