@@ -4,6 +4,7 @@ import org.modelmapper.ModelMapper;
 import pl.kathelan.jpainherittest.UserRepository;
 import pl.kathelan.jpainherittest.dtos.ExtendedUserDto;
 import pl.kathelan.jpainherittest.dtos.UserDto;
+import pl.kathelan.jpainherittest.dtos.UserDtoImpl;
 import pl.kathelan.jpainherittest.entities.ExtendedUser;
 import pl.kathelan.jpainherittest.entities.User;
 
@@ -16,8 +17,8 @@ public class UserSaveVisitor implements UserDtoVisitor<UserDto> {
     }
 
     @Override
-    public UserDto visit(UserDto userDto) {
-        return saveAndReturnDto(userDto, User.class, UserDto.class);
+    public UserDtoImpl visit(UserDtoImpl userDto) {
+        return saveAndReturnDto(userDto, User.class, UserDtoImpl.class);
     }
 
     @Override

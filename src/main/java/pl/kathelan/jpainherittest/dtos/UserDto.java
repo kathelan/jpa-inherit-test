@@ -10,7 +10,7 @@ import pl.kathelan.jpainherittest.services.UserDtoVisitor;
 @RequiredArgsConstructor
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = UserDto.class, name = "userDto"),
+        @JsonSubTypes.Type(value = UserDtoImpl.class, name = "userDto"),
         @JsonSubTypes.Type(value = ExtendedUserDto.class, name = "extendedUserDto")
 })
 public abstract class UserDto {
