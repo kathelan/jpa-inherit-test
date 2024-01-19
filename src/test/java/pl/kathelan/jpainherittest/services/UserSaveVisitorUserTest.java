@@ -1,4 +1,4 @@
-package pl.kathelan.jpainherittest.controllers;
+package pl.kathelan.jpainherittest.services;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,7 +11,6 @@ import pl.kathelan.jpainherittest.UserRepository;
 import pl.kathelan.jpainherittest.dtos.UserDto;
 import pl.kathelan.jpainherittest.dtos.UserDtoImpl;
 import pl.kathelan.jpainherittest.entities.User;
-import pl.kathelan.jpainherittest.services.UserSaveVisitorUser;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
