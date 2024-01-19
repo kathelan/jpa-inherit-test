@@ -10,6 +10,9 @@ import lombok.*;
 @Getter
 @RequiredArgsConstructor
 public class User {
+    public enum UserType {
+        USER, EXTENDED_USER
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,5 +23,9 @@ public class User {
 
     @Column(name = "last_name")
     private String lastName;
+
+    @Column(name = "type")
+    @Enumerated(EnumType.STRING)
+    private UserType type;
 
 }

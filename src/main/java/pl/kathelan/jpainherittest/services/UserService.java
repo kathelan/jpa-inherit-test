@@ -13,7 +13,7 @@ public class UserService {
     private final UserRepository userRepository;
     private final ModelMapper modelMapper;
     public UserDto createUser(UserDto userDto) {
-        UserSaveVisitor visitor = new UserSaveVisitor(userRepository, modelMapper);
+        UserSaveVisitorUser visitor = new UserSaveVisitorUser(userRepository, modelMapper);
         return userDto.accept(visitor);
     }
 }
